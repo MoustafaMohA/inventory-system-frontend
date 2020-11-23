@@ -1,0 +1,36 @@
+<ng-template #deleteAll>
+  <div nz-row [nzGutter]="[10, 10]">
+    <div nz-col>
+      <i nz-icon nzType="delete" nzTheme="fill" nz-tooltip="Delete All Selected" (click)="deleteSelected()"></i>
+    </div>
+    <div nz-col>
+      <i nz-icon nzType="plus" nzTheme="outline" nz-tooltip="Add new product" [routerLink]="['/products/new']"></i>
+    </div>
+  </div>
+</ng-template>
+
+<nz-card nzTitle="Products List" [nzExtra]="deleteAll">
+  <nz-table #productsTable [nzData]="products" nzSize="small" nzBordered [nzFrontPagination]="true"
+            [nzLoading]="isProductsLoading">
+    <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Product Description</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of productsTable.data">
+      <td [nzChecked]="setOfCheckedId.has(product.id)" (nzCheckedChange)="onItemChecked(product.id, $event)"></td>
+      <td>{{product.id}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.productDescription}}</td>
+      <td>{{product.price}}</td>
+      <td><i nz-icon nzType="delete" nzTheme="fill" nz-tooltip="Delete product" (click)="delete(product)"></i></td>
+    </tr>
+    </tbody>
+  </nz-table>
+</nz-card>

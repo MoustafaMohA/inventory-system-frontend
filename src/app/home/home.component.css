@@ -1,0 +1,10 @@
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  height: 100%;
+}
+
+.ant-breadcrumb a,
+.ant-breadcrumb-separator {
+  color: white;
+}

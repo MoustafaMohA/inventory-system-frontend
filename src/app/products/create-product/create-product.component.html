@@ -1,0 +1,24 @@
+<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="create()">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input product name!">
+      <nz-input-group nzPrefixIcon="user">
+        <input type="text" nz-input formControlName="productName" placeholder="Product Name" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Enter product description!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input type="text" nz-input formControlName="productDescription" placeholder="Product description" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please enter product price!">
+      <nz-input-group nzPrefixIcon="money-collect">
+        <input type="number" nz-input formControlName="price" placeholder="Price" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Create</button>
+</form>
