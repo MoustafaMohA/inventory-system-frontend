@@ -6,7 +6,7 @@ import {CreateProductComponent} from './create-product/create-product.component'
 
 const routes: Routes = [
   {path: '', component: ListComponent, pathMatch: 'full', data: {breadcrumb: 'Products'}},
-  {path: 'view/:id', component: ViewDetailsComponent,  data: {breadcrumb: 'Product Details'}},
+  {path: ':id', component: ViewDetailsComponent,  data: {breadcrumb: 'Product Details'}},
   {path: 'new', component: CreateProductComponent,  data: {breadcrumb: 'Create new'}}
 ];
 

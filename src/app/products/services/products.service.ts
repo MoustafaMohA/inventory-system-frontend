@@ -16,8 +16,8 @@ export class ProductsService {
     return this.httpClient.get<ProductsModel[]>(`${this.url}/`);
   }
 
-  get(id: number): Observable<ProductsModel> {
-    return this.httpClient.get<ProductsModel>(`${this.url}/${id}`);
+  get(id: number): Observable<ProductsModel[]> {
+    return this.httpClient.get<ProductsModel[]>(`${this.url}/${id}`);
   }
 
   delete(id: number): Observable<any> {

@@ -15,6 +15,7 @@ import {NzFormModule} from 'ng-zorro-antd/form';
 import {ReactiveFormsModule} from '@angular/forms';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzButtonModule} from 'ng-zorro-antd/button';
+import {NzSpaceModule} from 'ng-zorro-antd/space';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {NzButtonModule} from 'ng-zorro-antd/button';
     NzGridModule,
     NzFormModule,
     NzInputModule,
-    NzButtonModule
+    NzButtonModule,
+    NzSpaceModule
   ]
 })
 export class ProductsModule {

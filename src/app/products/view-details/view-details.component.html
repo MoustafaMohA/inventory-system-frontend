@@ -1,1 +1,15 @@
-<p>view-details works!</p>
+<nz-card nzTitle="Product Details">
+  <div nz-space nzDirection="vertical" nzSize="large">
+    <nz-space-item>
+      <span class="itemWidth">Product Name : </span><span>{{ product?.productName}}</span>
+    </nz-space-item>
+    <nz-space-item>
+      <span class="itemWidth">Product Description : </span><span>{{ product?.productDescription}}</span>
+    </nz-space-item>
+    <nz-space-item>
+      <span class="itemWidth">Product Price : </span><span>{{ product?.price.toLocaleString('en-IN', {
+      style: 'currency', currency: 'USD'
+    }) }}</span>
+    </nz-space-item>
+  </div>
+</nz-card>
