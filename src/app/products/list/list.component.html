@@ -25,7 +25,7 @@
     <tbody>
     <tr *ngFor="let product of productsTable.data">
       <td [nzChecked]="setOfCheckedId.has(product.id)" (nzCheckedChange)="onItemChecked(product.id, $event)"></td>
-      <td><a [routerLink]="['/products/' + product.id]">{{product.id}}</a></td>
+      <td><a [routerLink]="['/products/details/' + product.id]">{{product.id}}</a></td>
       <td>{{product.productName}}</td>
       <td>{{product.productDescription}}</td>
       <td>{{product.price}}</td>
